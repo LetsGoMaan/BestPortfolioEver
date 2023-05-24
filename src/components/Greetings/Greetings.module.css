@@ -1,0 +1,37 @@
+.section {
+grid-area: 1 / 1 / 2 / 2;
+}
+.firstBlockContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.title {
+    font-family: 'Lato', serif, Calibri, Arial;
+    text-transform: uppercase;
+}
+
+.topTitle {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.middleTitle {
+    font-size: 45px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+}
+
+.bottomTitle {
+    color: #daa520;
+    font-size: 28px;
+    font-weight: 600;
+}

@@ -1,0 +1,15 @@
+.container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    background-color: #111;
+}
+
+.container section {
+    background: #222222;
+}
+
+
