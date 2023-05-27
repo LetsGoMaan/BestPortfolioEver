@@ -1,5 +1,5 @@
 import React from "react";
-import commonStyles from "../../common/styles/commonStyles.module.css";
+import commonStyles from "../../../common/styles/commonStyles.module.css";
 import ownStyles from './Contacts.module.css'
 
 export const Contacts = () => {

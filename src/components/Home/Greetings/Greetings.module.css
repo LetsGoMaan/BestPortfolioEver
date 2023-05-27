@@ -8,6 +8,7 @@ grid-area: 1 / 1 / 2 / 2;
     flex-direction: column;
     height: 100%;
     width: 100%;
+    background-color: #111111;
 }
 
 .title {
@@ -23,7 +24,7 @@ grid-area: 1 / 1 / 2 / 2;
 }
 
 .middleTitle {
-    font-size: 45px;
+    font-size: 55px;
     margin-bottom: 15px;
     font-weight: 700;
     text-align: center;

@@ -1,6 +1,6 @@
 import {Navigate, Route, Routes} from "react-router-dom";
 import {Home} from "../Home/Home";
-import {Info} from "../Info/Info";
+import {Info} from "./Info/Info";
 import styles from "./Content.module.css"
 
 const Content = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import commonStyles from "../../common/styles/commonStyles.module.css"
+import commonStyles from "../../../common/styles/commonStyles.module.css"
 import {NavLink} from "react-router-dom";
 import ownStyles from "./AboutMe.module.css"
 
