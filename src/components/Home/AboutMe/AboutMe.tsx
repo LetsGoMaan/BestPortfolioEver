@@ -8,7 +8,7 @@ export const AboutMe = () => {
         <>
             <section className={ownStyles.section}>
                 <NavLink to={"/aboutMe"} >
-                    <div onClick={()=> console.log("контейнер")} className={commonStyles.container}>
+                    <div className={commonStyles.container}>
 
                     <div className={`${commonStyles.text} ${commonStyles.textWhite}`}>About</div>
                     <div className={`${commonStyles.text} ${commonStyles.textOrange}`}>About</div>

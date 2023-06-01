@@ -150,13 +150,19 @@
 .resumeContainer {
     border-top: 1px solid #333;
     border-bottom: 1px solid #333;
-    padding: 50px 0;
-    display: flex;
+    padding: 50px 0 70px 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
     margin: 0 auto;
 }
 
 .resumeWrapper {
-    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .resumeButtons {
@@ -164,7 +170,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    color: #fff;
+    color: #888;
     font-weight: 600;
 }
 
@@ -184,16 +190,13 @@
     padding-right: 10px;
 }
 
-.cardsContainer {
-    border: 1px solid #333;
-}
-
 .cardsWrapper {
-
+    border: 1px solid #333;
+    margin-right: 20px;
 }
 
 .card {
-    width: 400px;
+    width: 100%;
 }
 
 .cardHeader {
@@ -202,10 +205,82 @@
     padding: 24px;
     text-align: center;
     color: #daa520;
+    font-weight: bold;
+    font-size: 21px;
 }
 
 .cardBody {
     color: white;
+    padding: 24px;
+}
+
+.cardSubtitle {
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+}
+
+.cardSubtitle span {
+    font-weight: 600;
+}
+
+.date {
+    font-size: 13px;
+    color: #aaa;
+
+}
+
+.dateIcon {
+    margin-right: 10px;
+}
+
+.cardText {
+    font-size: 14px;
+    color: #eee;
+    font-weight: 400;
+    margin: 10px 0 20px 0;
+}
+
+.cardBodyDivider {
+    border-bottom: 2px solid #daa520;
+    width: 70px;
+    margin-bottom: 24px;
+}
+
+.containerBadges {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 34px 0;
+}
+
+.badgeWrapper {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.badgeIcon {
+    font-size: 48px;
+    color: #777;
+}
+
+.badgeText {
+    font-size: 48px;
+    color: #daa520;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.badgeTitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: #eee;
+    margin: 0;
+    text-transform: uppercase;
 }
 
 

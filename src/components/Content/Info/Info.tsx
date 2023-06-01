@@ -5,7 +5,7 @@ import {
     faAddressCard,
     faBriefcase, faCalendar,
     faFilePdf,
-    faGraduationCap,
+    faGraduationCap, faHandshake, faHeart,
     faPenToSquare, faStar,
     faUser
 } from "@fortawesome/free-solid-svg-icons";
@@ -18,7 +18,7 @@ export const Info = () => {
         setIsActive(!isActive);
     };
 
-    const activeButton = `${ownStyles.resumeButton} ${isActive ? ownStyles.active: ''}`
+    const activeButton = `${ownStyles.resumeButton} ${isActive ? ownStyles.active : ""}`
     return (
         <>
             <section>
@@ -39,9 +39,11 @@ export const Info = () => {
 
                         <div className={ownStyles.personalInfo}>
                          <span className={ownStyles.iconUser}>
-                       <FontAwesomeIcon icon={faUser} />
+                       <FontAwesomeIcon icon={faUser}/>
                         </span>
-                            <p className={ownStyles.personalDescription}>I'm a Freelance Web Designer & Developer based in Moscow, Russia, I have serious passion for UI effects, animations and creating intuitive, with over a decade of experience.</p>
+                            <p className={ownStyles.personalDescription}>I'm a Freelance Web Designer & Developer based
+                                in Moscow, Russia, I have serious passion for UI effects, animations and creating
+                                intuitive, with over a decade of experience.</p>
                         </div>
 
                         <div className={ownStyles.contacts}>
@@ -64,10 +66,10 @@ export const Info = () => {
                         <div className={ownStyles.infoButtons}>
                             <a href="#" className={ownStyles.downloadResumeButton}>
                                 DOWNLOAD RESUME
-                                <FontAwesomeIcon className={ownStyles.iconPdf} icon={faFilePdf} /></a>
+                                <FontAwesomeIcon className={ownStyles.iconPdf} icon={faFilePdf}/></a>
                             <a href="#" className={ownStyles.myBlogButton}>
                                 MY BLOG
-                                <FontAwesomeIcon className={ownStyles.iconPetToSquare} icon={faPenToSquare} />
+                                <FontAwesomeIcon className={ownStyles.iconPetToSquare} icon={faPenToSquare}/>
                             </a>
                         </div>
                     </div>
@@ -75,47 +77,87 @@ export const Info = () => {
 
                 <div className={ownStyles.resumeContainer}>
                     <div className={ownStyles.resumeWrapper}>
-                        <div  className={ownStyles.resumeButtons}>
+                        <div className={ownStyles.resumeButtons}>
                             <div onClick={handleClick} className={activeButton}>
                                 <FontAwesomeIcon icon={faBriefcase} className={ownStyles.resumeIcons}/>
                                 EXPERIENCE
                             </div>
                             <div onClick={handleClick} className={activeButton}>
-                                <FontAwesomeIcon icon={faGraduationCap} className={ownStyles.resumeIcons} />
-                                EDUCATION</div>
+                                <FontAwesomeIcon icon={faGraduationCap} className={ownStyles.resumeIcons}/>
+                                EDUCATION
+                            </div>
                             <div onClick={handleClick} className={activeButton}>
-                                <FontAwesomeIcon icon={faStar} className={ownStyles.resumeIcons} />
+                                <FontAwesomeIcon icon={faStar} className={ownStyles.resumeIcons}/>
                                 SKILLS
                             </div>
                         </div>
                     </div>
-                    <div className={ownStyles.cardsContainer}>
-                        <div className={ownStyles.cardsWrapper}>
-                            <div className={ownStyles.card}>
-                                <div className={ownStyles.cardHeader}>
-                                    <FontAwesomeIcon icon={faBriefcase} className={ownStyles.resumeIcons}/>
-                                    EXPERIENCE
-                                </div>
-                                <div className={ownStyles.cardBody}>
-                                    <div>
-                                        <h6><span>WEB DESIGNER</span>ENVATO</h6>
-                                        <span>
-                                            <FontAwesomeIcon icon={faCalendar} />
-                                            " 2015 - 2023"
+                    <div className={ownStyles.cardsWrapper}>
+
+                        <div className={ownStyles.card}>
+                            <div className={ownStyles.cardHeader}>
+                                <FontAwesomeIcon icon={faBriefcase} className={ownStyles.resumeIcons}/>
+                                EXPERIENCE
+                            </div>
+                            <div className={ownStyles.cardBody}>
+                                <div>
+                                    <h6 className={ownStyles.cardSubtitle}><span>WEB DESIGNER - </span>ENVATO</h6>
+                                    <span className={ownStyles.date}>
+                                            <FontAwesomeIcon icon={faCalendar} className={ownStyles.dateIcon}/>
+                                             2015 - 2023
                                         </span>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium orci sit amet mi ullamcorper
-                                        </p>
-                                    </div>
-                                    <span></span>
-                                    <div></div>
-                                    <span></span>
-                                    <div></div>
+                                    <p className={ownStyles.cardText}>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium orci
+                                        sit amet mi ullamcorper
+                                    </p>
+                                </div>
+                                <div className={ownStyles.cardBodyDivider}></div>
+                                <div>
+                                    <h6 className={ownStyles.cardSubtitle}><span>WEB DESIGNER - </span>ENVATO</h6>
+                                    <span className={ownStyles.date}>
+                                            <FontAwesomeIcon icon={faCalendar} className={ownStyles.dateIcon}/>
+                                             2015 - 2023
+                                        </span>
+                                    <p className={ownStyles.cardText}>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium orci
+                                        sit amet mi ullamcorper
+                                    </p>
+                                </div>
+                                <div className={ownStyles.cardBodyDivider}></div>
+                                <div>
+                                    <h6 className={ownStyles.cardSubtitle}><span>WEB DESIGNER - </span>ENVATO</h6>
+                                    <span className={ownStyles.date}>
+                                            <FontAwesomeIcon icon={faCalendar} className={ownStyles.dateIcon}/>
+                                             2015 - 2023
+                                        </span>
+                                    <p className={ownStyles.cardText}>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium orci
+                                        sit amet mi ullamcorper
+                                    </p>
                                 </div>
                             </div>
-                            <div></div>
-                            <div></div>
                         </div>
+                        <div></div>
+                        <div></div>
+
+                    </div>
+                </div>
+
+                <div className={ownStyles.containerBadges}>
+                    <div className={ownStyles.badgeWrapper}>
+                        <FontAwesomeIcon icon={faBriefcase} className={ownStyles.badgeIcon}/>
+                        <span className={ownStyles.badgeText}>4+</span>
+                        <h6 className={ownStyles.badgeTitle}>Years Expirience</h6>
+                    </div>
+                    <div className={ownStyles.badgeWrapper}>
+                        <FontAwesomeIcon icon={faHandshake} className={ownStyles.badgeIcon}/>
+                        <span className={ownStyles.badgeText}>10+</span>
+                        <h6 className={ownStyles.badgeTitle}>DONE PROJECTS</h6>
+                    </div>
+                    <div className={ownStyles.badgeWrapper}>
+                        <FontAwesomeIcon icon={faHeart} className={ownStyles.badgeIcon}/>
+                        <span className={ownStyles.badgeText}>77+</span>
+                        <h6 className={ownStyles.badgeTitle}>HAPPY CUSTOMERS</h6>
                     </div>
                 </div>
             </section>
