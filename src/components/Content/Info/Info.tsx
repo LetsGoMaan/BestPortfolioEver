@@ -9,6 +9,7 @@ import {
     faPenToSquare, faStar,
     faUser
 } from "@fortawesome/free-solid-svg-icons";
+import {Title} from "../../common/Title/Title";
 
 export const Info = () => {
 
@@ -23,20 +24,19 @@ export const Info = () => {
         <>
             <section>
                 <div className={ownStyles.info}>
-                    <h2 className={ownStyles.title}>
-                        <span className={ownStyles.firstWord}>About</span>
-                        <span className={ownStyles.secondWord}>me</span>
-                    </h2>
+                    {/*<h2 className={ownStyles.title}>*/}
+                    {/*    <span className={ownStyles.firstWord}>About</span>*/}
+                    {/*    <span className={ownStyles.secondWord}>me</span>*/}
+                    {/*</h2>*/}
+                    {/*<div className={ownStyles.dividerBlock}>*/}
+                    {/*    <div className={ownStyles.divider}></div>*/}
+                    {/*    <span>*/}
+                    {/*    <FontAwesomeIcon icon={faAddressCard} className={ownStyles.iconAddressCard}/>*/}
+                    {/*</span>*/}
+                    {/*    <div className={ownStyles.divider}></div>*/}
+                    {/*</div>*/}
+                    <Title icon={<FontAwesomeIcon icon={faAddressCard}/>} firstWord={"About"} secondWord={"Me"}/>
                     <div className={ownStyles.containerInfo}>
-
-                        <div className={ownStyles.dividerBlock}>
-                            <div className={ownStyles.divider}></div>
-                            <span>
-                        <FontAwesomeIcon icon={faAddressCard} className={ownStyles.iconAddressCard}/>
-                    </span>
-                            <div className={ownStyles.divider}></div>
-                        </div>
-
                         <div className={ownStyles.personalInfo}>
                          <span className={ownStyles.iconUser}>
                        <FontAwesomeIcon icon={faUser}/>

@@ -1,0 +1,141 @@
+.getInTouchContainer {
+    text-align: center;
+    margin: 50px 20px 0;
+    height: 100%;
+    overflow: auto;
+
+}
+
+.getInTouchWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contactsAndSocials {
+    background: #111;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 24px;
+    border: 1px solid #333;
+    width: 400px;
+
+}
+
+.subTitle {
+    color: #daa520;
+    margin: 0 0 18px 0;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.iconAndInfo {
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+
+
+.icon {
+    color: rgba(255, 255, 255, .3);
+    padding-right: 10px
+}
+
+
+.socialWrapper {
+    display: flex;
+    gap: 15px;
+}
+
+.socialIcon {
+    font-size: 35px;
+
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+
+}
+
+.formTitle {
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 18px;
+}
+
+.formText {
+    font-size: 14px;
+    color: white;
+    text-align: start;
+    line-height: 24px;
+    width: 75%;
+}
+
+.formField {
+    margin-bottom: 24px;
+}
+
+.iconButton {
+    color: red;
+}
+
+.form {
+    width: 100%;
+}
+
+.textField {
+    display: flex;
+    align-items: center;
+}
+
+.inputIcon {
+    color: #ccc;
+    padding-right: 10px
+}
+
+.inputActiveIcon {
+    color: #daa520;
+    padding-right: 10px
+}
+
+.inputError {
+    display: flex;
+    height: 40px;
+    color: #ff4343;
+    margin: 0 0 10px 25px;
+    font-family: 'Lato', serif;
+    font-weight: 400;
+}
+
+.formSubmitButton {
+    color: white;
+    font-weight: 700;
+    background: #daa520;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 32px;
+    height: 42px;
+    line-height: 42px;
+    font-size: 15px;
+    width: 450px;
+    cursor: pointer;
+}
+
+.sendButtonIcon {
+    color: white;
+    padding-left: 10px;
+}
+
+
+
+
+
+

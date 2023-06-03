@@ -193,10 +193,11 @@
 .cardsWrapper {
     border: 1px solid #333;
     margin-right: 20px;
+    max-width: 645px;
 }
 
 .card {
-    width: 100%;
+
 }
 
 .cardHeader {

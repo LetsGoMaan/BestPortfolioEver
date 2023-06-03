@@ -7,7 +7,7 @@ export const AboutMe = () => {
     return (
         <>
             <section className={ownStyles.section}>
-                <NavLink to={"/aboutMe"} >
+                <NavLink to={"/about_me"} >
                     <div className={commonStyles.container}>
 
                     <div className={`${commonStyles.text} ${commonStyles.textWhite}`}>About</div>

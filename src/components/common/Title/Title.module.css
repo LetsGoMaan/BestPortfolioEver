@@ -1,0 +1,33 @@
+.title {
+    font-size: 55px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0 0 30px
+}
+
+.firstWord {
+    color: white;
+    margin-right: 10px;
+}
+
+.secondWord {
+    color: #daa520;
+}
+
+.dividerBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.divider {
+    border-bottom: 1px solid #656c6d;
+    width: 180px;
+}
+
+.icon {
+    font-size: 20px;
+    color: #daa520
+}
