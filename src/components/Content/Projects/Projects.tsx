@@ -12,41 +12,22 @@ import project6 from "../../../assets/img/project-6.png"
 import project7 from "../../../assets/img/project-7.png"
 import project8 from "../../../assets/img/project-8.png"
 import project9 from "../../../assets/img/project-9.png"
+import {Project} from "./Project/Project";
+import {GoBack} from "../../common/GoBack/GoBack";
 
 export const Projects = () => {
+    const projects = [project1, project2, project3, project4,
+        project5, project6, project7, project8, project9];
+
     return (
         <section>
            <div className={ownStyles.projectsContainer}>
+               <GoBack/>
                <Title icon={<FontAwesomeIcon icon={faSuitcase}/>} firstWord={"MY"} secondWord={"PORTFOLIO"}/>
                <div className={ownStyles.projectsWrapper}>
-                   <div className={ownStyles.project1}>
-                       <img className={ownStyles.projectImage} src={`${project1}`} alt="project1"/>
-                   </div>
-                   <div className={ownStyles.project2}>
-                       <img className={ownStyles.projectImage} src={`${project2}`} alt="project2"/>
-                   </div>
-                   <div className={ownStyles.project3}>
-                       <img className={ownStyles.projectImage} src={`${project3}`} alt="project3"/>
-                   </div>
-                   <div className={ownStyles.project4}>
-                       {/*<FontAwesomeIcon className={ownStyles.projectImage} icon={faRectangleList} />*/}
-                       <img className={ownStyles.projectImage} src={`${project4}`} alt="project4"/>
-                   </div>
-                   <div className={ownStyles.project5}>
-                       <img className={ownStyles.projectImage} src={`${project5}`} alt="project5"/>
-                   </div>
-                   <div className={ownStyles.project6}>
-                       <img className={ownStyles.projectImage} src={`${project6}`} alt="project6"/>
-                   </div>
-                   <div className={ownStyles.project7}>
-                       <img className={ownStyles.projectImage} src={`${project7}`} alt="project7"/>
-                   </div>
-                   <div className={ownStyles.project8}>
-                       <img className={ownStyles.projectImage} src={`${project8}`} alt="project8"/>
-                   </div>
-                   <div className={ownStyles.project9}>
-                       <img className={ownStyles.projectImage} src={`${project9}`} alt="project9"/>
-                   </div>
+                       {projects.map((project, index) => (
+                           <Project project={project} index={index}/>
+                       ))}
                </div>
            </div>
         </section>

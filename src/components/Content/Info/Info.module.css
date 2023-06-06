@@ -1,3 +1,8 @@
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+}
 
 .info {
     text-align: center;
@@ -183,7 +188,8 @@
 }
 
 .active {
-    background-color: red;
+    background-color: #daa520;
+    color: white;
 }
 
 .resumeIcons {

@@ -10,31 +10,40 @@ import {
     faUser
 } from "@fortawesome/free-solid-svg-icons";
 import {Title} from "../../common/Title/Title";
+import {Card} from "./Card/Card";
+import {ResumeButton} from "./ResumeButton/ResumeButton";
+import {GoBack} from "../../common/GoBack/GoBack";
 
 export const Info = () => {
+    const [isButtonActive, setIsButtonActive] = useState({experience: true, education: false, skills: false});
 
-    const [isActive, setIsActive] = useState(false);
-
-    const handleClick = () => {
-        setIsActive(!isActive);
+    const handleExperienceButtonOnclick = () => {
+        setIsButtonActive({
+            experience: true,
+            education: false,
+            skills: false
+        });
+    };
+    const handleEducationButtonOnclick = () => {
+        setIsButtonActive({
+            experience: false,
+            education: true,
+            skills: false
+        });
+    };
+    const handleSkillsButtonOnclick = () => {
+        setIsButtonActive({
+            experience: false,
+            education: false,
+            skills: true
+        });
     };
 
-    const activeButton = `${ownStyles.resumeButton} ${isActive ? ownStyles.active : ""}`
     return (
         <>
             <section>
                 <div className={ownStyles.info}>
-                    {/*<h2 className={ownStyles.title}>*/}
-                    {/*    <span className={ownStyles.firstWord}>About</span>*/}
-                    {/*    <span className={ownStyles.secondWord}>me</span>*/}
-                    {/*</h2>*/}
-                    {/*<div className={ownStyles.dividerBlock}>*/}
-                    {/*    <div className={ownStyles.divider}></div>*/}
-                    {/*    <span>*/}
-                    {/*    <FontAwesomeIcon icon={faAddressCard} className={ownStyles.iconAddressCard}/>*/}
-                    {/*</span>*/}
-                    {/*    <div className={ownStyles.divider}></div>*/}
-                    {/*</div>*/}
+                <GoBack/>
                     <Title icon={<FontAwesomeIcon icon={faAddressCard}/>} firstWord={"About"} secondWord={"Me"}/>
                     <div className={ownStyles.containerInfo}>
                         <div className={ownStyles.personalInfo}>
@@ -58,7 +67,7 @@ export const Info = () => {
                                 <li><span>Phone:</span> +375 29 516 01 76</li>
                                 <li><span>Address:</span> Minsk, Belarus</li>
                                 <li><span>Email:</span> ilikeseik@gmail.com</li>
-                                <li><span>Spoken Langages:</span> Russian-English</li>
+                                <li><span>Spoken Languages:</span> Russian-English</li>
                                 <li><span>Telegram:</span> @LetsGoMan</li>
                             </ul>
                         </div>
@@ -78,67 +87,59 @@ export const Info = () => {
                 <div className={ownStyles.resumeContainer}>
                     <div className={ownStyles.resumeWrapper}>
                         <div className={ownStyles.resumeButtons}>
-                            <div onClick={handleClick} className={activeButton}>
-                                <FontAwesomeIcon icon={faBriefcase} className={ownStyles.resumeIcons}/>
-                                EXPERIENCE
-                            </div>
-                            <div onClick={handleClick} className={activeButton}>
-                                <FontAwesomeIcon icon={faGraduationCap} className={ownStyles.resumeIcons}/>
-                                EDUCATION
-                            </div>
-                            <div onClick={handleClick} className={activeButton}>
-                                <FontAwesomeIcon icon={faStar} className={ownStyles.resumeIcons}/>
-                                SKILLS
-                            </div>
+                            <ResumeButton onClick={handleExperienceButtonOnclick} buttonStatus={isButtonActive.experience} iconName={faBriefcase} buttonText={"EXPERIENCE"}/>
+                            <ResumeButton onClick={handleEducationButtonOnclick} buttonStatus={isButtonActive.education} iconName={faGraduationCap} buttonText={"EDUCATION"}/>
+                            <ResumeButton onClick={handleSkillsButtonOnclick} buttonStatus={isButtonActive.skills} iconName={faStar} buttonText={"SKILLS"}/>
                         </div>
                     </div>
                     <div className={ownStyles.cardsWrapper}>
-
-                        <div className={ownStyles.card}>
-                            <div className={ownStyles.cardHeader}>
-                                <FontAwesomeIcon icon={faBriefcase} className={ownStyles.resumeIcons}/>
-                                EXPERIENCE
+                        {isButtonActive.experience &&
+                            <div className={ownStyles.card}>
+                                <div className={ownStyles.cardHeader}>
+                                    <FontAwesomeIcon icon={faBriefcase} className={ownStyles.resumeIcons}/>
+                                    EXPERIENCE
+                                </div>
+                                <div className={ownStyles.cardBody}>
+                                    <div>
+                                        <h6 className={ownStyles.cardSubtitle}><span>WEB DESIGNER - </span>ENVATO</h6>
+                                        <span className={ownStyles.date}>
+                                            <FontAwesomeIcon icon={faCalendar} className={ownStyles.dateIcon}/>
+                                             2015 - 2023
+                                        </span>
+                                        <p className={ownStyles.cardText}>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium orci
+                                            sit amet mi ullamcorper
+                                        </p>
+                                    </div>
+                                    <div className={ownStyles.cardBodyDivider}></div>
+                                    <div>
+                                        <h6 className={ownStyles.cardSubtitle}><span>WEB DESIGNER - </span>ENVATO</h6>
+                                        <span className={ownStyles.date}>
+                                            <FontAwesomeIcon icon={faCalendar} className={ownStyles.dateIcon}/>
+                                             2015 - 2023
+                                        </span>
+                                        <p className={ownStyles.cardText}>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium orci
+                                            sit amet mi ullamcorper
+                                        </p>
+                                    </div>
+                                    <div className={ownStyles.cardBodyDivider}></div>
+                                    <div>
+                                        <h6 className={ownStyles.cardSubtitle}><span>WEB DESIGNER - </span>ENVATO</h6>
+                                        <span className={ownStyles.date}>
+                                            <FontAwesomeIcon icon={faCalendar} className={ownStyles.dateIcon}/>
+                                             2015 - 2023
+                                        </span>
+                                        <p className={ownStyles.cardText}>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium orci
+                                            sit amet mi ullamcorper
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <div className={ownStyles.cardBody}>
-                                <div>
-                                    <h6 className={ownStyles.cardSubtitle}><span>WEB DESIGNER - </span>ENVATO</h6>
-                                    <span className={ownStyles.date}>
-                                            <FontAwesomeIcon icon={faCalendar} className={ownStyles.dateIcon}/>
-                                             2015 - 2023
-                                        </span>
-                                    <p className={ownStyles.cardText}>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium orci
-                                        sit amet mi ullamcorper
-                                    </p>
-                                </div>
-                                <div className={ownStyles.cardBodyDivider}></div>
-                                <div>
-                                    <h6 className={ownStyles.cardSubtitle}><span>WEB DESIGNER - </span>ENVATO</h6>
-                                    <span className={ownStyles.date}>
-                                            <FontAwesomeIcon icon={faCalendar} className={ownStyles.dateIcon}/>
-                                             2015 - 2023
-                                        </span>
-                                    <p className={ownStyles.cardText}>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium orci
-                                        sit amet mi ullamcorper
-                                    </p>
-                                </div>
-                                <div className={ownStyles.cardBodyDivider}></div>
-                                <div>
-                                    <h6 className={ownStyles.cardSubtitle}><span>WEB DESIGNER - </span>ENVATO</h6>
-                                    <span className={ownStyles.date}>
-                                            <FontAwesomeIcon icon={faCalendar} className={ownStyles.dateIcon}/>
-                                             2015 - 2023
-                                        </span>
-                                    <p className={ownStyles.cardText}>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium orci
-                                        sit amet mi ullamcorper
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div></div>
-                        <div></div>
+                        }
+                        {isButtonActive.education && <Card cardTitle={"EDUCATION"}/>}
+                        {isButtonActive.skills && <Card cardTitle={"SKILLS"}/>}
 
                     </div>
                 </div>

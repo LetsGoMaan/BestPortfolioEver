@@ -1,8 +1,8 @@
 import React from "react";
 import Typed from "react-typed";
-import ownStyles from './Greetings.module.css';
+import ownStyles from './GreetingsBlock.module.css';
 
-export function Greetings() {
+export function GreetingsBlock() {
     return (
         <section className={ownStyles.section}>
             <div className={ownStyles.firstBlockContainer}>

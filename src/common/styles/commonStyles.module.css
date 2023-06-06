@@ -1,69 +1,89 @@
-.container {
-    position: relative;
-    height: 100%;
+.aboutMeSection {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.getInTouchSection {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.myPortfolioSection {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+section a {
+    text-decoration: none;
+}
+
+.textContainer {
     display: flex;
-    text-align: center;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    font-family: Lato, serif;
+    height: 100%;
+    border: none;
+    font-size: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.firstPair {
+    display: flex;
+}
+
+.secondPair {
+    display: flex;
 }
 
 .text {
-    position: absolute;
-    transform: translateY(0);
-    opacity: 1;
-    transition: transform 0.2s ease, opacity 0.2s ease, z-index 0s 0.2s;
-    font-size: 30px;
-    font-weight: 900;
-    text-transform: uppercase;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
 
-}
-.textWhite {
-    color: #fff;
-    z-index: 2;
-    margin-right: 120px;
-}
-.textOrange {
+.aboutOrange {
     color: #daa520;
-    z-index: 1;
-    transform: translateY(100%);
+    transform: translateY(0%);;
     opacity: 0;
-    margin-right: 120px;
 }
-.container:hover .textWhite {
-    transform: translateY(-100%);
-    opacity: 0;
-    z-index: 1;
 
-}
-.container:hover .textOrange {
-    transform: translateY(0);
+.aboutWhite {
+    color: white;
+    transform: translateY(50%);;
     opacity: 1;
-    z-index: 2;
+    margin-right: 10px;
+}
+
+.textContainer:hover .firstPair .aboutWhite {
+    transform: translateY(-50%);
+    opacity: 0;
 
 }
 
-.textOrangeSecond {
+.textContainer:hover .secondPair .aboutOrange {
+    transform: translateY(-50%);;
+    opacity: 1;
+}
+
+
+.meWhite {
+    color: white;
+    transform: translateY(0);
+    opacity: 0;
+}
+
+.meOrange {
     color: #daa520;
-    z-index: 2;
-    margin-left: 120px;
-}
-
-.textWhiteSecond {
-    color: #fff;
-    z-index: 1;
-    transform: translateY(-100%);
-    opacity: 0;
-    margin-left: 120px;
-}
-
-.container:hover .textOrangeSecond {
-    transform: translateY(100%);
-    opacity: 0;
-    z-index: 1;
-}
-
-.container:hover .textWhiteSecond {
-    transform: translateY(0);
+    transform: translateY(-50%);
     opacity: 1;
-    z-index: 2;
+    margin-left: 10px;
+}
+
+.textContainer:hover .firstPair .meWhite {
+    transform: translateY(50%);
+    opacity: 1;
+
+}
+
+.textContainer:hover .secondPair .meOrange {
+    transform: translateY(50%);
+    opacity: 0;
 }

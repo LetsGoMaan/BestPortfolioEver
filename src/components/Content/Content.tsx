@@ -7,13 +7,13 @@ import {Projects} from "./Projects/Projects";
 
 const Content = () => {
     return (
-        <div className={styles.container} >
+        <div className={styles.container}>
             <Routes>
-                <Route path="/"     element={<Home />}></Route>
-                <Route path="/about_me"    element={<Info/>}></Route>
+                <Route path="/" element={<Home/>}></Route>
+                <Route path="/about_me" element={<Info/>}></Route>
                 <Route path="/get_in_touch" element={<GetInTouch/>}></Route>
-                <Route path="/projects"  element={<Projects/>}></Route>
-                <Route path="*"         element={<Navigate to={'/home'} />}></Route>
+                <Route path="/projects" element={<Projects/>}></Route>
+                <Route path="*" element={<Navigate to={"/home"}/>}></Route>
             </Routes>
         </div>
     )

@@ -6,6 +6,7 @@ import {Title} from "../../common/Title/Title";
 import {SocialIcon} from "react-social-icons";
 import {SubmitHandler, useForm} from "react-hook-form";
 import {TextField} from "@mui/material";
+import {GoBack} from "../../common/GoBack/GoBack";
 
 type FormType = {
     email: string,
@@ -43,7 +44,6 @@ export const GetInTouch = () => {
             yourComment: false
         });
     };
-
     const handleYourEmailInputFocus = () => {
         setIsInputActive({
             yourName: false,
@@ -51,7 +51,6 @@ export const GetInTouch = () => {
             yourComment: false
         });
     };
-
     const handleYourCommentInputFocus = () => {
         setIsInputActive({
             yourName: false,
@@ -59,8 +58,6 @@ export const GetInTouch = () => {
             yourComment: true
         });
     };
-
-
 
     const handleInputBlur = () => {
         setIsInputActive({
@@ -75,7 +72,7 @@ export const GetInTouch = () => {
 
         <section>
             <div className={ownStyles.getInTouchContainer}>
-
+                <GoBack/>
                 <Title icon={<FontAwesomeIcon icon={faEnvelopeOpen}/>} firstWord={"GET"} secondWord={"IN TOUCH"}/>
                 <div className={ownStyles.getInTouchWrapper}>
                     <div className={ownStyles.contactsAndSocials}>
@@ -168,7 +165,7 @@ export const GetInTouch = () => {
                             </div>
 
                             <div className={ownStyles.textField}>
-                                <FontAwesomeIcon icon={faEnvelope} className={ isInputActive.email ? ownStyles.inputActiveIcon : ownStyles.inputIcon}/>
+                                <FontAwesomeIcon icon={faEnvelope}   className={ isInputActive.email ? ownStyles.inputActiveIcon : ownStyles.inputIcon}/>
                                 <TextField
 
                                     {...register("email", {
