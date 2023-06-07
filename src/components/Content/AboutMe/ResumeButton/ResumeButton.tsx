@@ -1,7 +1,6 @@
 import React from "react";
-import ownStyles from "../Info.module.css";
+import ownStyles from "../AboutMe.module.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faBriefcase} from "@fortawesome/free-solid-svg-icons";
 import {IconProp} from "@fortawesome/fontawesome-svg-core";
 
 type ResumeButtonType = {

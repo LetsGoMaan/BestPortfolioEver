@@ -1,5 +1,5 @@
 import React from "react";
-import commonStyles from "../../../common/styles/commonStyles.module.css";
+import ownStyles from "./NavBlock.module.css";
 import {NavLink} from "react-router-dom";
 
 type NavBlockType = {
@@ -14,14 +14,14 @@ export const NavBlock = (props: NavBlockType) => {
         <>
             <section className={props.classNameSection}>
             <NavLink to={props.nav} >
-                <div className={commonStyles.textContainer}>
-                    <div className={commonStyles.firstPair}>
-                        <div className={`${commonStyles.text} ${commonStyles.aboutWhite}`}>{props.firstWord}</div>
-                        <div className={`${commonStyles.text} ${commonStyles.meWhite}`}>{props.secondWord}</div>
+                <div className={ownStyles.textContainer}>
+                    <div className={ownStyles.firstPair}>
+                        <div className={`${ownStyles.text} ${ownStyles.aboutWhite}`}>{props.firstWord}</div>
+                        <div className={`${ownStyles.text} ${ownStyles.meWhite}`}>{props.secondWord}</div>
                     </div>
-                    <div className={commonStyles.secondPair} >
-                        <div className={`${commonStyles.text} ${commonStyles.aboutOrange}`}>{props.firstWord}</div>
-                        <div className={`${commonStyles.text} ${commonStyles.meOrange}`}>{props.secondWord}</div>
+                    <div className={ownStyles.secondPair} >
+                        <div className={`${ownStyles.text} ${ownStyles.aboutOrange}`}>{props.firstWord}</div>
+                        <div className={`${ownStyles.text} ${ownStyles.meOrange}`}>{props.secondWord}</div>
                     </div>
                 </div>
             </NavLink>

@@ -1,5 +1,5 @@
 import React from "react";
-import ownStyles from "../Projects.module.css";
+import ownStyles from "../MyPortfolio.module.css";
 
 type ProjectType = {
     index: number

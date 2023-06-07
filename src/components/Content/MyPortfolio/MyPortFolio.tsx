@@ -1,5 +1,5 @@
 import React from "react";
-import ownStyles from "./Projects.module.css";
+import ownStyles from "./MyPortfolio.module.css";
 import {Title} from "../../common/Title/Title";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSuitcase} from "@fortawesome/free-solid-svg-icons";
@@ -15,7 +15,7 @@ import project9 from "../../../assets/img/project-9.png"
 import {Project} from "./Project/Project";
 import {GoBack} from "../../common/GoBack/GoBack";
 
-export const Projects = () => {
+export const MyPortFolio = () => {
     const projects = [project1, project2, project3, project4,
         project5, project6, project7, project8, project9];
 
