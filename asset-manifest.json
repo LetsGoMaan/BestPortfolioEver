@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/BestPortfolioEver/static/css/main.0dda2dc6.css",
+    "main.js": "/BestPortfolioEver/static/js/main.6e294c29.js",
+    "static/js/787.1cf3b5dd.chunk.js": "/BestPortfolioEver/static/js/787.1cf3b5dd.chunk.js",
+    "static/media/woman.jpg": "/BestPortfolioEver/static/media/woman.f6da55994fca2b37e141.jpg",
+    "static/media/project-9.png": "/BestPortfolioEver/static/media/project-9.e9c602ed5e7054db9d87.png",
+    "static/media/project-1.png": "/BestPortfolioEver/static/media/project-1.37c27d37660f3009ec14.png",
+    "static/media/project-6.png": "/BestPortfolioEver/static/media/project-6.e2581df3f23c04c3e28f.png",
+    "static/media/project-8.png": "/BestPortfolioEver/static/media/project-8.00014c26c4a7c99dc78b.png",
+    "static/media/project-3.png": "/BestPortfolioEver/static/media/project-3.39f45b42bb35080614cf.png",
+    "static/media/project-7.png": "/BestPortfolioEver/static/media/project-7.382766418dd797656a67.png",
+    "static/media/project-2.png": "/BestPortfolioEver/static/media/project-2.8bc44318e2afab2d0d1b.png",
+    "static/media/project-5.png": "/BestPortfolioEver/static/media/project-5.faeb8d6e30dbd3cff6de.png",
+    "static/media/project-4.png": "/BestPortfolioEver/static/media/project-4.10b890f4c6ed326b7bb9.png",
+    "index.html": "/BestPortfolioEver/index.html",
+    "main.0dda2dc6.css.map": "/BestPortfolioEver/static/css/main.0dda2dc6.css.map",
+    "main.6e294c29.js.map": "/BestPortfolioEver/static/js/main.6e294c29.js.map",
+    "787.1cf3b5dd.chunk.js.map": "/BestPortfolioEver/static/js/787.1cf3b5dd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0dda2dc6.css",
+    "static/js/main.6e294c29.js"
+  ]
+}
