@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/BestPortfolioEver/static/css/main.0dda2dc6.css",
-    "main.js": "/BestPortfolioEver/static/js/main.805a4744.js",
+    "main.js": "/BestPortfolioEver/static/js/main.3dfb26c3.js",
     "static/js/787.1cf3b5dd.chunk.js": "/BestPortfolioEver/static/js/787.1cf3b5dd.chunk.js",
     "static/media/woman.jpg": "/BestPortfolioEver/static/media/woman.f6da55994fca2b37e141.jpg",
     "static/media/project-9.png": "/BestPortfolioEver/static/media/project-9.e9c602ed5e7054db9d87.png",
@@ -15,11 +15,11 @@
     "static/media/project-4.png": "/BestPortfolioEver/static/media/project-4.10b890f4c6ed326b7bb9.png",
     "index.html": "/BestPortfolioEver/index.html",
     "main.0dda2dc6.css.map": "/BestPortfolioEver/static/css/main.0dda2dc6.css.map",
-    "main.805a4744.js.map": "/BestPortfolioEver/static/js/main.805a4744.js.map",
+    "main.3dfb26c3.js.map": "/BestPortfolioEver/static/js/main.3dfb26c3.js.map",
     "787.1cf3b5dd.chunk.js.map": "/BestPortfolioEver/static/js/787.1cf3b5dd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0dda2dc6.css",
-    "static/js/main.805a4744.js"
+    "static/js/main.3dfb26c3.js"
   ]
 }
