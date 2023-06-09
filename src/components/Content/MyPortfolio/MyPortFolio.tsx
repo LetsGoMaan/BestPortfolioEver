@@ -20,7 +20,7 @@ export const MyPortFolio = () => {
         project5, project6, project7, project8, project9];
 
     return (
-        <section>
+        <section className={ownStyles.projectSection}>
            <div className={ownStyles.projectsContainer}>
                <GoBack/>
                <Title icon={<FontAwesomeIcon icon={faSuitcase}/>} firstWord={"MY"} secondWord={"PORTFOLIO"}/>
