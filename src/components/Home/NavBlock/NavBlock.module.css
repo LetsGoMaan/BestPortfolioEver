@@ -75,3 +75,15 @@ section a {
     transform: translateY(50%);
     opacity: 0;
 }
+
+@media (max-width: 1399px) {
+    .textContainer {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .textContainer {
+        font-size: 24px;
+    }
+}

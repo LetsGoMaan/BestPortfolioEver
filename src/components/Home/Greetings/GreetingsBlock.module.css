@@ -1,6 +1,4 @@
-.section {
-grid-area: 1 / 1 / 2 / 2;
-}
+
 .firstBlockContainer {
     display: flex;
     justify-content: center;
@@ -35,4 +33,23 @@ grid-area: 1 / 1 / 2 / 2;
     color: #daa520;
     font-size: 28px;
     font-weight: 900;
+}
+
+@media (max-width: 1399px) {
+    .topTitle {
+        font-size: 20px;
+    }
+    .middleTitle {
+        font-size: 35px;
+    }
+    .bottomTitle {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 799px) {
+    .section {
+        flex-grow: 2 !important;
+    }
+
 }

@@ -2,4 +2,12 @@
     grid-area: 1 / 2 / 3 / 4;
     background-color:  #222222;
     overflow: auto;
+
 }
+
+@media (max-width: 992px) {
+    .container {
+        height: 100%;
+    }
+}
+

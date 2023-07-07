@@ -144,7 +144,7 @@ export const GetInTouch = () => {
                                     sx={{
                                         color: "white",
                                         borderBottom: "1px solid #666",
-                                        width: "600px"
+
                                     }}
                                     InputProps={{
                                         style: {
@@ -157,8 +157,8 @@ export const GetInTouch = () => {
                                     InputLabelProps={{
                                         style: {
                                             color: "white"
-                                        },
-                                }}/>
+                                        },}}
+                                />
                             </div>
                             <div className={ownStyles.inputError}>
                                 {errors?.yourName && <p>{errors?.yourName?.message || "Error!"}</p>}
@@ -188,7 +188,7 @@ export const GetInTouch = () => {
                                     sx={{
                                         color: "white",
                                         borderBottom: "1px solid #666",
-                                        width: "600px"
+                                        maxWidth: "600px"
                                     }}
                                     InputProps={{
                                         style: {
@@ -231,7 +231,7 @@ export const GetInTouch = () => {
                                     sx={{
                                         color: "white",
                                         borderBottom: "1px solid #666",
-                                        width: "600px"
+                                        width: "360px"
                                     }}
                                     InputProps={{
                                         style: {

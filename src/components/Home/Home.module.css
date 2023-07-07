@@ -12,6 +12,12 @@
     background: #222222;
 }
 
+.greetingsBlock {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+
+
 .aboutMeSection {
     grid-area: 1 / 2 / 2 / 3;
 }
@@ -24,4 +30,18 @@
     grid-area: 2 / 1 / 3 / 2;
 }
 
+@media (max-width: 799px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .aboutMeSection, .getInTouchSection, .myPortfolioSection {
+        flex-grow: 1;
+    }
+    .greetingsBlock {
+        flex-grow: 3;
+    }
+
+}
 

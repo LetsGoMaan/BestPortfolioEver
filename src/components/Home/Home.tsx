@@ -8,7 +8,7 @@ export const Home = () => {
     return (
         <>
             <div className={styles.container}>
-                <GreetingsBlock/>
+                <GreetingsBlock classNameSection={ownStyles.greetingsBlock}/>
                 <NavBlock firstWord={"ABOUT"} secondWord={"ME"} classNameSection={ownStyles.aboutMeSection}
                           nav={"/about_me"}/>
                 <NavBlock firstWord={"GET"} secondWord={"IN TOUCH"} classNameSection={ownStyles.getInTouchSection}

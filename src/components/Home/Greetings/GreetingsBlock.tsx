@@ -2,9 +2,13 @@ import React from "react";
 import Typed from "react-typed";
 import ownStyles from './GreetingsBlock.module.css';
 
-export function GreetingsBlock() {
+type PropsType = {
+    classNameSection: string
+}
+
+export function GreetingsBlock({classNameSection}:PropsType) {
     return (
-        <section className={ownStyles.section}>
+        <section className={classNameSection}>
             <div className={ownStyles.firstBlockContainer}>
                 <div className={`${ownStyles.topTitle} ${ownStyles.title}`}>Hi THERE! I'M</div>
                 <div className={`${ownStyles.middleTitle} ${ownStyles.title}`}>ANDREY PROHOROV</div>
