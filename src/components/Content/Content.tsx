@@ -4,6 +4,7 @@ import {AboutMe} from "./AboutMe/AboutMe";
 import styles from "./Content.module.css"
 import {GetInTouch} from "./GetInTouch/GetInTouch";
 import {MyPortFolio} from "./MyPortfolio/MyPortFolio";
+import {GetInTouch1} from "./GetInTouch/GetInTouch1";
 
 const Content = () => {
     return (
@@ -11,7 +12,7 @@ const Content = () => {
             <Routes>
                 <Route path="/" element={<Home/>}></Route>
                 <Route path="/about_me" element={<AboutMe/>}></Route>
-                <Route path="/get_in_touch" element={<GetInTouch/>}></Route>
+                <Route path="/get_in_touch" element={<GetInTouch1/>}></Route>
                 <Route path="/projects" element={<MyPortFolio/>}></Route>
                 <Route path="*" element={<Navigate to={"/home"}/>}></Route>
             </Routes>
