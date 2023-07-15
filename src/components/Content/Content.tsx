@@ -2,11 +2,13 @@ import {Navigate, Route, Routes} from "react-router-dom";
 import {Home} from "../Home/Home";
 import {AboutMe} from "./AboutMe/AboutMe";
 import styles from "./Content.module.css"
-import {GetInTouch} from "./GetInTouch/GetInTouch";
 import {MyPortFolio} from "./MyPortfolio/MyPortFolio";
 import {GetInTouch1} from "./GetInTouch/GetInTouch1";
 
 const Content = () => {
+
+
+
     return (
         <div className={styles.container}>
             <Routes>

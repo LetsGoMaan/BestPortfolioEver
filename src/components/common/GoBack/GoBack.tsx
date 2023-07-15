@@ -1,21 +1,24 @@
 import React from "react";
 import {faX} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import ownStyles from './GoBack.module.css'
-import {useNavigate} from "react-router-dom";
+import ownStyles from "./GoBack.module.css"
 
 
-export const GoBack = () => {
-    const navigate = useNavigate();
+type PropsType = {
+    onClickHandler: () => void
+}
 
-    const handleGoBack = () => {
-        navigate(-1);
+export const GoBack = ({onClickHandler}:PropsType) => {
+
+    const onClickHandlerGoBack = () => {
+        onClickHandler()
     };
 
 
     return (
         <>
-            <div onClick={handleGoBack}>
+
+            <div onClick={onClickHandlerGoBack}>
                 <FontAwesomeIcon icon={faX} className={ownStyles.xMark} />
             </div>
         </>

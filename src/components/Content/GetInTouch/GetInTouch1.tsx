@@ -4,7 +4,6 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faComments, faEnvelope, faEnvelopeOpen, faHome, faPaperPlane, faPhone} from "@fortawesome/free-solid-svg-icons";
 import {Title} from "../../common/Title/Title";
 import {SocialIcon} from "react-social-icons";
-import {SubmitHandler, useForm} from "react-hook-form";
 import {TextField} from "@mui/material";
 import {GoBack} from "../../common/GoBack/GoBack";
 
@@ -31,6 +30,8 @@ export const GetInTouch1 = () => {
             yourComment: false
         });
     };
+
+
 
     return (
 

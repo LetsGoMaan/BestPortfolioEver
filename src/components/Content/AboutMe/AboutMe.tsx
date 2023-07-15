@@ -8,53 +8,98 @@ import {ResumeButton} from "./ResumeButton/ResumeButton";
 import {GoBack} from "../../common/GoBack/GoBack";
 import {PersonalInfo} from "./PersonalInfo/PersonalInfo";
 import {Badge} from "./Badge/Badge";
+import {CSSTransition} from "react-transition-group";
+import {useNavigate} from "react-router-dom";
+
+
+type ActiveButtonType = {
+    experience: boolean,
+    education: boolean,
+    skills: boolean
+}
 
 export const AboutMe = () => {
     const [isButtonActive, setIsButtonActive] = useState({experience: true, education: false, skills: false});
 
-    const handleExperienceButtonOnclick = () => {
-        setIsButtonActive({
-            experience: true,
-            education: false,
-            skills: false
-        });
+    const handleActiveButton = (activeButton: ActiveButtonType) => {
+        setIsButtonActive(activeButton);
     };
-    const handleEducationButtonOnclick = () => {
-        setIsButtonActive({
-            experience: false,
-            education: true,
-            skills: false
-        });
-    };
-    const handleSkillsButtonOnclick = () => {
-        setIsButtonActive({
-            experience: false,
-            education: false,
-            skills: true
-        });
-    };
+    const [isEnter, setIsEnter] = useState(true)
+    const navigate = useNavigate();
+    const onClickHandler = () => {
+        setIsEnter((v) => !v)
+        setTimeout(() => {
+            navigate(-1)
+        }, 750)
+
+    }
 
     return (
         <>
-            <section>
-                <div className={ownStyles.info}>
-                <GoBack/>
+            <CSSTransition
+                in={isEnter}
+                timeout={5000}
+                classNames={{
+                    appear: ownStyles.myclassAppear,
+                    appearActive: ownStyles.myclassAppearActive,
+                    appearDone: ownStyles.myclassAppearDone,
+                    enter: ownStyles.myclassEnter,
+                    enterActive: ownStyles.myclassEnterActive,
+                    enterDone: ownStyles.myclassEnterDone,
+                    exit: ownStyles.myclassExit,
+                    exitActive: ownStyles.myclassExitActive,
+                    exitDone: ownStyles.myclassExitDone
+                }}
+                appear={true}
+                mountOnEnter
+                unmountOnExit
+
+            >
+            <section >
+                <div className={ownStyles.info} >
+                    {/*<div onClick={onClickHandler}>*/}
+                    {/*    <FontAwesomeIcon icon={faX} className={ownStyles.xMark} />*/}
+                    {/*</div>*/}
+                    <GoBack onClickHandler={onClickHandler}/>
                     <Title icon={<FontAwesomeIcon icon={faAddressCard}/>} firstWord={"About"} secondWord={"Me"}/>
                     <PersonalInfo/>
                 </div>
                 <div className={ownStyles.resumeContainer}>
                     <div className={ownStyles.resumeWrapper}>
                         <div className={ownStyles.resumeButtons}>
-                            <ResumeButton onClick={handleExperienceButtonOnclick} buttonStatus={isButtonActive.experience} iconName={faBriefcase} buttonText={"EXPERIENCE"}/>
-                            <ResumeButton onClick={handleEducationButtonOnclick} buttonStatus={isButtonActive.education} iconName={faGraduationCap} buttonText={"EDUCATION"}/>
-                            <ResumeButton onClick={handleSkillsButtonOnclick} buttonStatus={isButtonActive.skills} iconName={faStar} buttonText={"SKILLS"}/>
+                            <ResumeButton onClick={() => handleActiveButton({
+                                experience: true,
+                                education: false,
+                                skills: false
+                            })}
+                                          buttonStatus={isButtonActive.experience} iconName={faBriefcase}
+                                          buttonText={"EXPERIENCE"}/>
+                            <ResumeButton onClick={() => handleActiveButton({
+                                experience: false,
+                                education: true,
+                                skills: false
+                            })}
+                                          buttonStatus={isButtonActive.education}
+                                          iconName={faGraduationCap} buttonText={"EDUCATION"}/>
+                            <ResumeButton onClick={() => handleActiveButton({
+                                experience: false,
+                                education: false,
+                                skills: true
+                            })} buttonStatus={isButtonActive.skills}
+                                          iconName={faStar} buttonText={"SKILLS"}/>
+                        </div>
+                        <div className={ownStyles.cardsWrapper}>
+                            {isButtonActive.experience && <Card cardTitle={"EXPERIENCE"}/>}
+                            {isButtonActive.education && <Card cardTitle={"EDUCATION"}/>}
+                            {isButtonActive.skills && <Card cardTitle={"SKILLS"}/>}
+                        </div>
+                        <div className={ownStyles.cardsWrapperMobile}>
+                            <Card cardTitle={"EXPERIENCE"}/>
+                            <Card cardTitle={"EDUCATION"}/>
+                            <Card cardTitle={"SKILLS"}/>
                         </div>
                     </div>
-                    <div className={ownStyles.cardsWrapper}>
-                        {isButtonActive.experience && <Card cardTitle={"EXPERIENCE"}/>}
-                        {isButtonActive.education && <Card cardTitle={"EDUCATION"}/>}
-                        {isButtonActive.skills && <Card cardTitle={"SKILLS"}/>}
-                    </div>
+
                 </div>
                 <div className={ownStyles.containerBadges}>
                     <Badge iconName={faBriefcase} badgeNumber={"4+"} badgeText={"Years Experience"}/>
@@ -62,6 +107,7 @@ export const AboutMe = () => {
                     <Badge iconName={faBriefcase} badgeNumber={"77+"} badgeText={"HAPPY CUSTOMERS"}/>
                 </div>
             </section>
+            </CSSTransition>
         </>
     );
 };
