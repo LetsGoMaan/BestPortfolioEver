@@ -10,6 +10,7 @@ import {PersonalInfo} from "./PersonalInfo/PersonalInfo";
 import {Badge} from "./Badge/Badge";
 import {CSSTransition} from "react-transition-group";
 import {useNavigate} from "react-router-dom";
+import commonStyles from '../../common/commonStyles.module.css'
 
 
 type ActiveButtonType = {
@@ -25,6 +26,7 @@ export const AboutMe = () => {
         setIsButtonActive(activeButton);
     };
     const [isEnter, setIsEnter] = useState(true)
+    console.log(isEnter)
     const navigate = useNavigate();
     const onClickHandler = () => {
         setIsEnter((v) => !v)
@@ -38,17 +40,17 @@ export const AboutMe = () => {
         <>
             <CSSTransition
                 in={isEnter}
-                timeout={5000}
+                timeout={750}
                 classNames={{
-                    appear: ownStyles.myclassAppear,
-                    appearActive: ownStyles.myclassAppearActive,
-                    appearDone: ownStyles.myclassAppearDone,
-                    enter: ownStyles.myclassEnter,
-                    enterActive: ownStyles.myclassEnterActive,
-                    enterDone: ownStyles.myclassEnterDone,
-                    exit: ownStyles.myclassExit,
-                    exitActive: ownStyles.myclassExitActive,
-                    exitDone: ownStyles.myclassExitDone
+                    appear: commonStyles.myclassAppear,
+                    appearActive: commonStyles.myclassAppearActive,
+                    appearDone: commonStyles.myclassAppearDone,
+                    enter: commonStyles.myclassEnter,
+                    enterActive: commonStyles.myclassEnterActive,
+                    enterDone: commonStyles.myclassEnterDone,
+                    exit: commonStyles.myclassExit,
+                    exitActive: commonStyles.myclassExitActive,
+                    exitDone: commonStyles.myclassExitDone
                 }}
                 appear={true}
                 mountOnEnter

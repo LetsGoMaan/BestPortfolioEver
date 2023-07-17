@@ -8,48 +8,7 @@
 
 }
 
-.myclassAppear {
-    opacity: 0;
-}
 
-.myclassAppearActive {
-    opacity: 1;
-    transition: opacity  750ms;
-    animation: scale-in-hor-right  750ms ease-in-out;
-}
-
-.myclassAppearDone {
-    opacity: 1;
-}
-
-.myclassEnter {
-    opacity: 0;
-}
-
-.myclassEnterActive {
-    opacity: 1;
-    transition: opacity  750ms;
-    animation: scale-in-hor-right  750ms ease-in-out;
-}
-
-.myclassEnterDone {
-    opacity: 1;
-}
-
-
-.myclassExit {
-    opacity: 1;
-}
-
-.myclassExitActive {
-    opacity: 0;
-    transition: opacity 750ms;
-    animation: scale-out-hor-right  750ms ease-in-out;
-}
-
-.myclassExitDone {
-
-}
 
 
 
@@ -328,38 +287,7 @@
 /*    }*/
 /*}*/
 
-@-webkit-keyframes scale-out-hor-right {
-    0% {
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1);
-        -webkit-transform-origin: 100% 100%;
-        transform-origin: 100% 100%;
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: scaleX(0);
-        transform: scaleX(0);
-        -webkit-transform-origin: 100% 100%;
-        transform-origin: 100% 100%;
-        opacity: 0;
-    }
-}
-@keyframes scale-out-hor-right {
-    0% {
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1);
-        -webkit-transform-origin: 100% 100%;
-        transform-origin: 100% 100%;
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: scaleX(0);
-        transform: scaleX(0);
-        -webkit-transform-origin: 100% 100%;
-        transform-origin: 100% 100%;
-        opacity: 0;
-    }
-}
+
 
 
 

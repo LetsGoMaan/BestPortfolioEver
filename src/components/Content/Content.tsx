@@ -5,9 +5,20 @@ import styles from "./Content.module.css"
 import {MyPortFolio} from "./MyPortfolio/MyPortFolio";
 import {GetInTouch1} from "./GetInTouch/GetInTouch1";
 
+
 const Content = () => {
 
-
+    // const [isEnter, setIsEnter] = useState(true)
+    // console.log(isEnter)
+    // const navigate = useNavigate();
+    // const onClickHandler = () => {
+    //     debugger
+    //     setIsEnter((v) => !v)
+    //     setTimeout(() => {
+    //         navigate(-1)
+    //     }, 750)
+    //
+    // }
 
     return (
         <div className={styles.container}>
