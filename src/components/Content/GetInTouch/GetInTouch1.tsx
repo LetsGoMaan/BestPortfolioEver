@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {ChangeEvent, FormEvent, useState} from "react";
 import ownStyles from "./GetInTouch1.module.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faComments, faEnvelope, faEnvelopeOpen, faHome, faPaperPlane, faPhone} from "@fortawesome/free-solid-svg-icons";
@@ -9,6 +9,7 @@ import {GoBack} from "../../common/GoBack/GoBack";
 import {useNavigate} from "react-router-dom";
 import {CSSTransition} from "react-transition-group";
 import commonStyles from "../../common/commonStyles.module.css"
+import axios from "axios";
 
 type InitialStateType = {
     email: boolean,
@@ -19,8 +20,38 @@ type InitialStateType = {
 
 export const GetInTouch1 = () => {
 
+    const [stateForm, setStateForm] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+
+    console.log(stateForm)
+
+    const handleChange = (event:ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setStateForm({
+            ...stateForm,
+            [event.target.name]: event.target.value
+        });
+    };
+
+    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        try {
+            console.log(stateForm)
+            await axios.post('https://nodejs-node-mailer.vercel.app/send-email', stateForm);
+            console.log("успех")
+        } catch (error) {
+            console.log('ошибка')
+            console.log(error);
+        }
+            // axios.post('https://nodejs-node-mailer.vercel.app/send-email', stateForm)
+            //     .then(() => {
+            //         console.log('your message has been sent')
+            //     })
+    };
+
     const [isEnter, setIsEnter] = useState(true)
-    console.log(isEnter)
     const navigate = useNavigate();
     const onClickHandler = () => {
         setIsEnter((v) => !v)
@@ -29,6 +60,17 @@ export const GetInTouch1 = () => {
         }, 750)
 
     }
+
+    // const submitHandler = (e:FormEvent<HTMLButtonElement>) => {
+    //     e.preventDefault()
+    //
+    //         axios.post("http://localhost:3010/send-email")
+    //             .then(() => {
+    //                 alert('Your message in on the way')
+    //             })
+    //
+    //     console.log('yolo')
+    // }
 
 
     const [isInputActive, setIsInputActive] = useState({yourName: false, email: false, yourComment: false});
@@ -115,12 +157,16 @@ export const GetInTouch1 = () => {
                                     below and I will reply you shortly.
                                 </p>
 
-                                <form className={ownStyles.form}>
+                                <form onSubmit={handleSubmit} className={ownStyles.form}>
 
                                     <div className={ownStyles.textField}>
                                         <FontAwesomeIcon icon={faPaperPlane}
                                                          className={isInputActive.yourName ? ownStyles.inputActiveIcon : ownStyles.inputIcon}/>
                                         <TextField
+                                            type={"text"}
+                                            name={"name"}
+                                            value={stateForm.name}
+                                            onChange={handleChange}
                                             variant={"standard"}
                                             label={"Your Name"}
                                             autoComplete={"off"}
@@ -155,11 +201,14 @@ export const GetInTouch1 = () => {
                                         <FontAwesomeIcon icon={faEnvelope}
                                                          className={isInputActive.email ? ownStyles.inputActiveIcon : ownStyles.inputIcon}/>
                                         <TextField
+                                            type={"email"}
+                                            name={"email"}
+                                            value={stateForm.email}
+                                            onChange={handleChange}
                                             variant={"standard"}
                                             label={"Your Email"}
                                             autoComplete={"off"}
                                             required
-                                            type={"email"}
                                             sx={{
                                                 color: "white",
                                                 borderBottom: "1px solid #666",
@@ -189,6 +238,9 @@ export const GetInTouch1 = () => {
                                         <FontAwesomeIcon icon={faComments}
                                                          className={isInputActive.yourComment ? ownStyles.inputActiveIcon : ownStyles.inputIcon}/>
                                         <TextField
+                                            name={"message"}
+                                            value={stateForm.message}
+                                            onChange={handleChange}
                                             required
                                             variant={"standard"}
                                             label={"Your Comment"}
