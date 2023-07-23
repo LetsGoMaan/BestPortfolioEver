@@ -60,7 +60,7 @@ export const MyPortFolio = () => {
                     <Title icon={<FontAwesomeIcon icon={faSuitcase}/>} firstWord={"MY"} secondWord={"PORTFOLIO"}/>
                     <div className={ownStyles.projectsWrapper}>
                         {projects.map((project, index) => (
-                            <Project project={project} index={index}/>
+                                <Project project={project} index={index}/>
                         ))}
                     </div>
                 </div>

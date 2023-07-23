@@ -9,8 +9,13 @@ type ProjectType = {
 export const Project = (props: ProjectType) => {
     return (
         <>
-            <div className={ownStyles[`project${props.index+1}`]} key={props.index}>
+
+            <div className={ownStyles.project} key={props.index}>
                 <img className={ownStyles.projectImage} src={props.project} alt={`project${props.index+1}`}/>
+                <div className={ownStyles.overlay}>
+                    <button className={ownStyles.button1}><a>DEMO</a></button>
+                    <button className={ownStyles.button2}><a>CODE</a></button>
+                </div>
             </div>
         </>
     );

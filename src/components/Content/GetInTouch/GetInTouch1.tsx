@@ -39,7 +39,9 @@ export const GetInTouch1 = () => {
         event.preventDefault();
         try {
             console.log(stateForm)
-            await axios.post('https://nodejs-node-mailer.vercel.app/send-email', stateForm);
+            await axios.post('https://nodejs-node-mailer.vercel.app/send-email', stateForm, {headers: {
+                    'Content-Type': 'application/json'
+                }});
             console.log("успех")
         } catch (error) {
             console.log('ошибка')
