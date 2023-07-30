@@ -31,7 +31,7 @@ export const PersonalInfo = () => {
                                 <li><span>Phone:</span> +375 29 516 01 76</li>
                                 <li><span>Address:</span> Minsk, Belarus</li>
                                 <li><span>Email:</span> ilikeseik@gmail.com</li>
-                                <li><span>Spoken Languages:</span> Russian-English</li>
+                                <li><span>Spoken Languages:</span> Russian(Native) - English(B2)</li>
                                 <li><span>Telegram:</span> @LetsGoMan</li>
                             </ul>
                         </div>

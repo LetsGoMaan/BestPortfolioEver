@@ -1,16 +1,25 @@
 import React, {useState} from "react";
 import ownStyles from "./AboutMe.module.css"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faAddressCard, faBriefcase, faGraduationCap, faHandshake, faStar} from "@fortawesome/free-solid-svg-icons";
+import {
+    faAddressCard,
+    faBriefcase,
+    faChalkboardUser,
+    faCode,
+    faGraduationCap,
+    faStar
+} from "@fortawesome/free-solid-svg-icons";
 import {Title} from "../../common/Title/Title";
-import {Card} from "./Card/Card";
+import {Experience} from "./Card/Experience";
 import {ResumeButton} from "./ResumeButton/ResumeButton";
 import {GoBack} from "../../common/GoBack/GoBack";
 import {PersonalInfo} from "./PersonalInfo/PersonalInfo";
 import {Badge} from "./Badge/Badge";
 import {CSSTransition} from "react-transition-group";
 import {useNavigate} from "react-router-dom";
-import commonStyles from '../../common/commonStyles.module.css'
+import commonStyles from "../../common/commonStyles.module.css"
+import {Education} from "./Card/Education";
+import {Skills} from "./Card/Skills";
 
 
 type ActiveButtonType = {
@@ -26,7 +35,7 @@ export const AboutMe = () => {
         setIsButtonActive(activeButton);
     };
     const [isEnter, setIsEnter] = useState(true)
-    console.log(isEnter)
+
     const navigate = useNavigate();
     const onClickHandler = () => {
         setIsEnter((v) => !v)
@@ -35,6 +44,8 @@ export const AboutMe = () => {
         }, 750)
 
     }
+
+
 
     return (
         <>
@@ -91,22 +102,22 @@ export const AboutMe = () => {
                                           iconName={faStar} buttonText={"SKILLS"}/>
                         </div>
                         <div className={ownStyles.cardsWrapper}>
-                            {isButtonActive.experience && <Card cardTitle={"EXPERIENCE"}/>}
-                            {isButtonActive.education && <Card cardTitle={"EDUCATION"}/>}
-                            {isButtonActive.skills && <Card cardTitle={"SKILLS"}/>}
+                            {isButtonActive.experience && <Experience cardTitle={"EXPERIENCE"}/>}
+                            {isButtonActive.education && <Education cardTitle={"EDUCATION"}/>}
+                            {isButtonActive.skills && <Skills cardTitle={"SKILLS"}/>}
                         </div>
                         <div className={ownStyles.cardsWrapperMobile}>
-                            <Card cardTitle={"EXPERIENCE"}/>
-                            <Card cardTitle={"EDUCATION"}/>
-                            <Card cardTitle={"SKILLS"}/>
+                            <Experience cardTitle={"EXPERIENCE"}/>
+                            <Education cardTitle={"EDUCATION"}/>
+                            <Skills cardTitle={"SKILLS"}/>
                         </div>
                     </div>
 
                 </div>
                 <div className={ownStyles.containerBadges}>
-                    <Badge iconName={faBriefcase} badgeNumber={"4+"} badgeText={"Years Experience"}/>
-                    <Badge iconName={faHandshake} badgeNumber={"10+"} badgeText={"DONE PROJECTS"}/>
-                    <Badge iconName={faBriefcase} badgeNumber={"77+"} badgeText={"HAPPY CUSTOMERS"}/>
+                    <Badge iconName={faChalkboardUser} badgeNumber={"1.5+"} badgeText={"Years Experience"}/>
+                    <Badge iconName={faBriefcase} badgeNumber={"10+"} badgeText={"DONE PROJECTS"}/>
+                    <Badge iconName={faCode} badgeNumber={"2K+"} badgeText={"HOURS OF CODING"}/>
                 </div>
             </section>
             </CSSTransition>
