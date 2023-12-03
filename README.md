@@ -1,4 +1,3 @@
-My Portfolio
 Welcome to my portfolio repository! Here you will find my website, which showcases my professional portfolio. This website is designed to demonstrate my skills, projects, and achievements. It serves as a visual representation of my professional identity and can be used to impress potential clients or employers.
 
 Description
