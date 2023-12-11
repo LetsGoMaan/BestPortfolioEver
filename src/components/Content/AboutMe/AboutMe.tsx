@@ -115,7 +115,7 @@ export const AboutMe = () => {
 
                 </div>
                 <div className={ownStyles.containerBadges}>
-                    <Badge iconName={faChalkboardUser} badgeNumber={"1.5+"} badgeText={"Years Experience"}/>
+                    <Badge iconName={faChalkboardUser} badgeNumber={"1.2+"} badgeText={"Years Experience"}/>
                     <Badge iconName={faBriefcase} badgeNumber={"10+"} badgeText={"DONE PROJECTS"}/>
                     <Badge iconName={faCode} badgeNumber={"2K+"} badgeText={"HOURS OF CODING"}/>
                 </div>

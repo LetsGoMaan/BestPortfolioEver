@@ -18,35 +18,64 @@ export const Experience = (props: CardType) => {
                 </div>
                 <div className={ownStyles.cardBody}>
                     <div>
-                        <h6 className={ownStyles.cardSubtitle}><span>Front-end Developer - </span>InnovateNow</h6>
-                        <span className={ownStyles.date}>
-                                            <FontAwesomeIcon icon={faCalendar} className={ownStyles.dateIcon}/>
-                                             2023 Q3 - 2023 Until now
-                                        </span>
+                        <h6 className={ownStyles.cardSubtitle}><span>Front-end Developer - </span>SMART CARDS </h6>
+                        {/*<span className={ownStyles.date}>*/}
+                        {/*                    <FontAwesomeIcon icon={faCalendar} className={ownStyles.dateIcon}/>*/}
+                        {/*                     2023 Q3 - 2023 Until now*/}
+                        {/*                </span>*/}
                         <p className={ownStyles.cardText}>
-                            I created web pages and applications using HTML, CSS, JavaScript, React, and TypeScript. I collaborated with designers and back-end developers to ensure a seamless user experience. I kept up-to-date with the latest technologies to improve functionality and appeal, delivering high-quality results.
+                            STACK: React, Typescript, JavaScript, React-Hook-Form,
+                            SASS, RTK Query, React-Redux, Radix, React-Router-Dom,
+                            React-Toastify, zod
+                            <h6 className={ownStyles.taskTitle}>TASKS:</h6>
+                            <ul className={ownStyles.tasksList}>
+                                <li> Developing the user interface and styling it with SASS.</li>
+                                <li> Implementing form validation with React-Hook-Form and zod.</li>
+                                <li>Handling server communication with RTK Query.</li>
+                            </ul>
                         </p>
                     </div>
                     <div className={ownStyles.cardBodyDivider}></div>
                     <div>
-                        <h6 className={ownStyles.cardSubtitle}><span>Front-end Developer - </span>FREELANCE</h6>
-                        <span className={ownStyles.date}>
-                                            <FontAwesomeIcon icon={faCalendar} className={ownStyles.dateIcon}/>
-                                             2023 Q1 - 2023 Q2
-                                        </span>
+                        <h6 className={ownStyles.cardSubtitle}><span>Front-end Developer - </span>SOCIAL NETWORK</h6>
+                        {/*<span className={ownStyles.date}>*/}
+                        {/*                    <FontAwesomeIcon icon={faCalendar} className={ownStyles.dateIcon}/>*/}
+                        {/*                     2023 Q1 - 2023 Q2*/}
+                        {/*                </span>*/}
                         <p className={ownStyles.cardText}>
-                            As a freelance front-end developer, I have extensive experience in creating visually stunning and highly functional websites and web applications. My expertise in front-end development technologies and frameworks, combined with my ability to deliver projects exceeding my clients' expectations, have led to successful projects for a diverse range of clients.
+                            STACK: React, Typescript, JavaScript, Redux-Form, Redux,
+                            React-Redux,Reselect, React-Router-Dom
+                            <h6 className={ownStyles.taskTitle}>TASKS:</h6>
+                            <ul className={ownStyles.tasksList}>
+                                <li> Developing user interface components for profiles,
+                                    news feeds, posts, comments.
+                                </li>
+                                <li> Managing application state with Redux.</li>
+                                <li>Setting up routing using React-Router-Dom.</li>
+                                <li>Optimizing data selection using Reselect.</li>
+                            </ul>
                         </p>
                     </div>
                     <div className={ownStyles.cardBodyDivider}></div>
                     <div>
-                        <h6 className={ownStyles.cardSubtitle}><span>Salesman - </span>E-commerce businesses</h6>
-                        <span className={ownStyles.date}>
-                                            <FontAwesomeIcon icon={faCalendar} className={ownStyles.dateIcon}/>
-                                             2015 - 2023
-                                        </span>
+                        <h6 className={ownStyles.cardSubtitle}><span>Front-end Developer - </span>TASK MANAGER
+                        </h6>
+                        {/*<span className={ownStyles.date}>*/}
+                        {/*                    <FontAwesomeIcon icon={faCalendar} className={ownStyles.dateIcon}/>*/}
+                        {/*                     2015 - 2023*/}
+                        {/*                </span>*/}
                         <p className={ownStyles.cardText}>
-                            I am an experienced e-commerce sales manager who consistently exceeds targets, develops effective strategies, manages teams, and builds stakeholder relationships. With my help, businesses have increased sales and revenue by over 50% and grown their customer base by over 30%.
+                            STACK: React, Typescript, JavaScript, Axios, Formik, Reduxthunk, Material UI, React-Redux,React-Router-Dom
+                            <h6 className={ownStyles.taskTitle}>TASKS:</h6>
+                            <ul className={ownStyles.tasksList}>
+                                <li> Developing the user interface using Material UI.
+                                </li>
+                                <li> Сreate actions to modify the state and use reducers
+                                    to update it</li>
+                                <li>Handle user input, validate data, and update form
+                                    state.</li>
+                                <li>Interacting with the server using Axios.</li>
+                            </ul>
                         </p>
                     </div>
                 </div>

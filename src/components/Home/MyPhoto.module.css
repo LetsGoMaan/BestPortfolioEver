@@ -1,6 +1,6 @@
 .photo {
     grid-area: 1 / 1 / 3 / 2;
-    background-image: url('../../assets/img/woman.jpg');
+    background-image: url('../../assets/img/mainPhoto.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

@@ -3,25 +3,6 @@ import ownStyles from "./MyPortfolio.module.css";
 import {Title} from "../../common/Title/Title";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSuitcase} from "@fortawesome/free-solid-svg-icons";
-// import project1 from "../../../assets/img/project-1.png"
-// import project2 from "../../../assets/img/project-2.png"
-// import project3 from "../../../assets/img/project-3.png"
-// import project4 from "../../../assets/img/project-4.png"
-// import project5 from "../../../assets/img/project-5.png"
-// import project6 from "../../../assets/img/project-6.png"
-// import project7 from "../../../assets/img/project-7.png"
-// import project8 from "../../../assets/img/project-8.png"
-// import project9 from "../../../assets/img/project-9.png"
-
-import project1 from "../../../assets/img/project-1.jpg"
-import project2 from "../../../assets/img/project-2.jpg"
-import project3 from "../../../assets/img/project-3.jpg"
-import project4 from "../../../assets/img/project-4.jpg"
-import project5 from "../../../assets/img/project-5.jpg"
-import project6 from "../../../assets/img/project-6.jpg"
-import project7 from "../../../assets/img/project-7.jpg"
-import project8 from "../../../assets/img/project-8.jpg"
-import project9 from "../../../assets/img/project-9.jpg"
 import {Project} from "./Project/Project";
 import {GoBack} from "../../common/GoBack/GoBack";
 import {useNavigate} from "react-router-dom";
@@ -30,8 +11,8 @@ import {CSSTransition} from "react-transition-group";
 
 
 export const MyPortFolio = () => {
-    const projects = [project1, project2, project3, project4,
-        project5, project6, project7, project8, project9];
+    const projects = ['/img/project-1.jpg', '/img/project-2.jpg', '/img/project-3.jpg', '/img/project-4.jpg',
+        '/img/project-5.jpg', '/img/project-6.jpg', '/img/project-7.jpg', '/img/project-8.jpg', '/img/project-9.jpg'];
 
     const [isEnter, setIsEnter] = useState(true)
     console.log(isEnter)
@@ -62,8 +43,9 @@ export const MyPortFolio = () => {
                     exitDone: commonStyles.myclassExitDone
                 }}
                 appear={true}
-                mountOnEnter
-                unmountOnExit>
+                // mountOnEnter
+                // unmountOnExit
+            >
             <section className={ownStyles.projectSection}>
                 <div className={ownStyles.projectsContainer}>
                     <GoBack onClickHandler={onClickHandler}/>

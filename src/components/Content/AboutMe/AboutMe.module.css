@@ -104,11 +104,26 @@
     padding: 24px;
 }
 
+.imageBox {
+    display: flex;
+}
+
 .cardSubtitle {
     font-weight: 400;
     font-size: 15px;
     text-transform: uppercase;
     margin: 0 0 10px 0;
+}
+
+.taskTitle {
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 5px 0 0 0;
+}
+
+.tasksList {
+    margin: 5px 0;
 }
 
 .cardSubtitle span {

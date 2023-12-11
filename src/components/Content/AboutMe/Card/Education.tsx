@@ -21,7 +21,7 @@ export const Education = (props: CardType) => {
                         <h6 className={ownStyles.cardSubtitle}><span>Front-end Developer - </span>IT-INCUBATOR</h6>
                         <span className={ownStyles.date}>
                                             <FontAwesomeIcon icon={faCalendar} className={ownStyles.dateIcon}/>
-                                             2023 Q1 - 2023 Q2
+                                             2023 Q1 - 2023 Q4
                                         </span>
                         <p className={ownStyles.cardText}>
                             I completed specialized front-end development courses to enhance my skills in HTML, CSS, JavaScript, React, and TypeScript. I am excited to apply my knowledge to create innovative web applications that meet the needs of modern users.
@@ -29,10 +29,10 @@ export const Education = (props: CardType) => {
                     </div>
                     <div className={ownStyles.cardBodyDivider}></div>
                     <div>
-                        <h6 className={ownStyles.cardSubtitle}><span>Front-end Developer - </span>Self learning</h6>
+                        <h6 className={ownStyles.cardSubtitle}><span>Front-end Developer - </span>HTML ACADEMY</h6>
                         <span className={ownStyles.date}>
                                             <FontAwesomeIcon icon={faCalendar} className={ownStyles.dateIcon}/>
-                                             2022 Q2 - 2022 Q4
+                                             2022 Q1 - 2022 Q4
                                         </span>
                         <p className={ownStyles.cardText}>
                             Through online resources and personal projects, I gained proficiency in HTML, CSS, JavaScript, React, and other front-end technologies. I continuously sought new challenges to further my growth and development as a developer, improving my skills and staying up-to-date with industry trends.

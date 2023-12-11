@@ -2,7 +2,7 @@ import React from "react";
 import ownStyles from "./PersonalInfo.module.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faFilePdf, faPenToSquare, faUser} from "@fortawesome/free-solid-svg-icons";
-import men from '../../../../assets/img/men.jpg'
+import secondPhoto from '../../../../assets/img/secondPhoto.jpg'
 
 export const PersonalInfo = () => {
     return (
@@ -10,14 +10,14 @@ export const PersonalInfo = () => {
             <div className={ownStyles.containerInfo}>
                 <div className={ownStyles.containerWrapper}>
                     <div className={ownStyles.aboutMePhoto}>
-                        <img className={ownStyles.menPhoto} src={men} alt="men"/>
+                        <img className={ownStyles.menPhoto} src={secondPhoto} alt="men"/>
                     </div>
                     <div className={ownStyles.textContainer}>
                         <div className={ownStyles.personalInfo}>
                          <span className={ownStyles.iconUser}>
                        <FontAwesomeIcon icon={faUser}/>
                         </span>
-                            <p className={ownStyles.personalDescription}>I'm a Minsk-based web developer with 1.5+ years of experience building responsive and dynamic websites using modern technologies like HTML, CSS, JavaScript, and React. I'm passionate about creating user-friendly websites with clean code and attention to detail.</p>
+                            <p className={ownStyles.personalDescription}>I'm a Minsk-based web developer with 1.2+ years of experience building responsive and dynamic websites using modern technologies like HTML, CSS, JavaScript, and React. I'm passionate about creating user-friendly websites with clean code and attention to detail.</p>
                         </div>
                         <div className={ownStyles.contacts}>
                             <ul className={ownStyles.contactsList}>
@@ -36,11 +36,11 @@ export const PersonalInfo = () => {
                             </ul>
                         </div>
                         <div className={ownStyles.infoButtons}>
-                            <a href="#" className={ownStyles.downloadResumeButton}>
+                            <a href="https://drive.google.com/file/d/1jrdmmjjmjerUJPxUyxq2wnIQ8gWtaVvv/view?usp=sharing" download target="_blank" className={ownStyles.downloadResumeButton}>
                                 DOWNLOAD RESUME
                                 <FontAwesomeIcon className={ownStyles.iconPdf} icon={faFilePdf}/></a>
-                            <a href="#" className={ownStyles.myBlogButton}>
-                                MY BLOG
+                            <a href="https://www.linkedin.com/in/letsgoman/" target="_blank" className={ownStyles.myBlogButton}>
+                                MY LINKEDIN
                                 <FontAwesomeIcon className={ownStyles.iconPetToSquare} icon={faPenToSquare}/>
                             </a>
                         </div>
