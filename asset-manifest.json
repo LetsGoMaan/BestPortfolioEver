@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/BestPortfolioEver/static/css/main.96667016.css",
+    "main.css": "/BestPortfolioEver/static/css/main.aeab9ec4.css",
     "main.js": "/BestPortfolioEver/static/js/main.3c9d0940.js",
     "static/js/787.1cf3b5dd.chunk.js": "/BestPortfolioEver/static/js/787.1cf3b5dd.chunk.js",
     "static/media/secondPhoto.jpg": "/BestPortfolioEver/static/media/secondPhoto.00602bb8edf5dd03c5f9.jpg",
     "static/media/mainPhoto.jpg": "/BestPortfolioEver/static/media/mainPhoto.19fbb3e0069fb17382c5.jpg",
     "index.html": "/BestPortfolioEver/index.html",
-    "main.96667016.css.map": "/BestPortfolioEver/static/css/main.96667016.css.map",
+    "main.aeab9ec4.css.map": "/BestPortfolioEver/static/css/main.aeab9ec4.css.map",
     "main.3c9d0940.js.map": "/BestPortfolioEver/static/js/main.3c9d0940.js.map",
     "787.1cf3b5dd.chunk.js.map": "/BestPortfolioEver/static/js/787.1cf3b5dd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.96667016.css",
+    "static/css/main.aeab9ec4.css",
     "static/js/main.3c9d0940.js"
   ]
 }
